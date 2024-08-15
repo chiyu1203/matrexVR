@@ -47,10 +47,13 @@ public class ZmqListener : MonoBehaviour
                     // Update the pose based on the received values
                     ZmqMessage zmqMessage = JsonUtility.FromJson<ZmqMessage>(message);
                     UpdatePose(zmqMessage);
+
+                    // Debug.Log("zmq data: " + zmqMessage);
+
                 }
                 catch (NetMQException ex)
                 {
-                    Debugger.Log("NetMQException: " + ex.ToString());
+                    Debug.Log("NetMQException: " + ex.ToString());
                     Thread.Sleep(100);
                     continue;
                 }
