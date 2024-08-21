@@ -73,10 +73,6 @@ PrefabInstance:
       value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 2798074369262183959, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
-      propertyPath: field of view
-      value: 138.96138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2798074369262183959, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
       propertyPath: m_TargetDisplay
       value: 1
       objectReference: {fileID: 0}
@@ -91,10 +87,6 @@ PrefabInstance:
     - target: {fileID: 2798074369262183959, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2798074369411840680, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
-      propertyPath: field of view
-      value: 138.96138
       objectReference: {fileID: 0}
     - target: {fileID: 2798074369411840680, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
       propertyPath: m_TargetDisplay
@@ -127,10 +119,6 @@ PrefabInstance:
     - target: {fileID: 2798074369411840687, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2798074369683044203, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
-      propertyPath: field of view
-      value: 138.96138
       objectReference: {fileID: 0}
     - target: {fileID: 2798074369683044203, guid: 5215d64bb35f3ec5aab32cd6976ccab2, type: 3}
       propertyPath: m_TargetDisplay

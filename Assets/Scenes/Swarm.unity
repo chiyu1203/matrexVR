@@ -429,24 +429,12 @@ PrefabInstance:
       value: HighResUnimonitorSwarm VR1
       objectReference: {fileID: 0}
     - target: {fileID: 5074819932893147929, guid: 53e10c947de1c0c41babe4a681361046, type: 3}
-      propertyPath: field of view
-      value: 142.22493
-      objectReference: {fileID: 0}
-    - target: {fileID: 5074819932893147929, guid: 53e10c947de1c0c41babe4a681361046, type: 3}
       propertyPath: m_TargetDisplay
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5074819933011931046, guid: 53e10c947de1c0c41babe4a681361046, type: 3}
-      propertyPath: field of view
-      value: 142.22493
-      objectReference: {fileID: 0}
-    - target: {fileID: 5074819933011931046, guid: 53e10c947de1c0c41babe4a681361046, type: 3}
       propertyPath: m_TargetDisplay
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5074819933204947557, guid: 53e10c947de1c0c41babe4a681361046, type: 3}
-      propertyPath: field of view
-      value: 142.22493
       objectReference: {fileID: 0}
     - target: {fileID: 5074819933204947557, guid: 53e10c947de1c0c41babe4a681361046, type: 3}
       propertyPath: m_TargetDisplay
