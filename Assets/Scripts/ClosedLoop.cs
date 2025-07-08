@@ -71,22 +71,20 @@ public class ClosedLoop : MonoBehaviour
     {
         Vector3 currentFicTracData = GetCurrentFicTracData();
         Vector3 ficTracDelta = currentFicTracData - _lastFicTracData;
-        const float positionThreshold = 1e-6f;
-        const float rotationThreshold = 1e-6f;
         // Apply position change only if closedLoopPosition is true
         if (closedLoopPosition != 0.0f)
         {
             Vector3 positionDelta = _ficTracRotationOffset * new Vector3(ficTracDelta.x, 0, ficTracDelta.y) * sphereRadius * closedLoopPosition;
-            if (positionDelta.sqrMagnitude > positionThreshold)
-                transform.Translate(positionDelta, Space.World);
+            transform.Translate(positionDelta, Space.World);
         }
 
         // Apply rotation change only if closedLoopOrientation is true
         if (closedLoopOrientation != 0.0f)
         {
-            float rotationDelta = ficTracDelta.z * Mathf.Rad2Deg * closedLoopOrientation;
-            if (Mathf.Abs(rotationDelta) > rotationThreshold)
-                transform.Rotate(0, rotationDelta, 0, Space.World);
+            //float rotationDelta = ficTracDelta.z * Mathf.Rad2Deg * closedLoopOrientation;
+            float deltaYaw = DeltaAngleRad(currentFicTracData.z, _lastFicTracData.z);
+            float rotationDelta = deltaYaw * Mathf.Rad2Deg * closedLoopOrientation;
+            transform.Rotate(0, rotationDelta, 0, Space.World);
         }
 
         _lastFicTracData = currentFicTracData;
@@ -163,5 +161,12 @@ public class ClosedLoop : MonoBehaviour
         {
             Application.Quit();
         }
+    }
+    private float DeltaAngleRad(float current, float last)
+    {
+        float delta = current - last;
+        while (delta > Mathf.PI) delta -= 2 * Mathf.PI;
+        while (delta < -Mathf.PI) delta += 2 * Mathf.PI;
+        return delta;
     }
 }
